@@ -64,3 +64,18 @@ console.log(result);
 let saleWhitTax = new SaleWhitTax(10,110)
 const res2 = saleWhitTax.getTotal();
 console.log(res2)
+
+
+//TIPOS 
+
+//SIRVE PARA DEFINIR ESTRUCTURAS, COMO SON LOS NUMBER, STRING, PERO ESTE ES EL NUESTRO WE
+type Beer = {
+    name:string,
+    alcohol: number
+}
+
+//ACA DECIMOS QUE EL PARAMETRO beer es de tipo Beer como creamos arriba, el nuestro we, que tiene
+// un nombre tipo string y alcohol tipo number dentro, es lo que se espera
+function show(beer:Beer):void{
+    console.log(`info: ${beer.name} ${beer.alcohol}`)
+}

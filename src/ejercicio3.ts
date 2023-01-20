@@ -18,12 +18,13 @@ console.log(obtenerMayor2(1,2,3,4,5,6,7,8,9))
 
 
 
-function obtenerMayor(...numeros:number[]):number[]{
-    let menor = numeros[0]
-    let mayor = numeros[0]
 
+function obtenerMayor(...numeros:number[]):number[]{
+    let mayor = numeros[0]
+    let menor = numeros[0]
+    
     for (let i=0; i< numeros.length ; i++){
-       
+        
     //    Comparar los elementos y si se cumple la condicion
     //    remplazamos el valor
         if(menor > numeros[i]){
