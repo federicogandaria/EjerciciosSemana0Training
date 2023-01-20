@@ -5,37 +5,37 @@ class Figura {
     }
 }
 class Circulo extends Figura {
-    calcularArea() {
-        let areaCirculo;
-        areaCirculo = Math.PI * Math.pow(this.radio, 2);
-    }
-    calcularPerimetro() {
-        let perimetro;
-        perimetro = 2 * Math.PI * this.radio;
-    }
-    constructor(rad, nombre) {
+    constructor(nombre, rad) {
         super(nombre);
         this.radio = rad;
     }
-}
-class Cuadrado extends Figura {
     calcularArea() {
-        let areaCuadrado;
-        areaCuadrado = this.lado * this.lado;
+        let areaCirculo;
+        return Math.PI * Math.pow(this.radio, 2);
     }
     calcularPerimetro() {
         let perimetro;
-        perimetro = 4 * this.lado;
+        return 2 * Math.PI * this.radio;
     }
+}
+class Cuadrado extends Figura {
     constructor(nombre, lado) {
         super(nombre);
         this.lado = lado;
+    }
+    calcularArea() {
+        let areaCuadrado;
+        return this.lado * this.lado;
+    }
+    calcularPerimetro() {
+        let perimetro;
+        return 4 * this.lado;
     }
 }
 class CrearFiguras {
     crear(nombre, tipo, valor) {
         if (tipo == "Circulo") {
-            return new Circulo(valor, nombre);
+            return new Circulo(nombre, valor);
         }
         else {
             return new Cuadrado(nombre, valor);
@@ -49,3 +49,4 @@ let perimetroCirculo = circulo.calcularPerimetro();
 const cuadrado = crearFiguras.crear('Mi cuadrado', 'Cuadrado', 8);
 let areaCuadrado = circulo.calcularArea();
 let perimetroCuadrado = circulo.calcularPerimetro();
+console.log(areaCirculo);
